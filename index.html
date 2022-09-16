@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Calculadora</title>
+</head>
+<body>
+    <div>
+        <h1>Calculadora Básica</h1>
+        <input type="num1" placeholder="Número 1" id="num1">
+        <input type="num2" placeholder="Número 2" id="num2">
+        <button onclick="calc('+')">+</button>
+        <button onclick="calc('-')">-</button>
+        <button onclick="calc('*')">*</button>
+        <button onclick="calc('/')">/</button>
+        <input type="number" id="soma"  readonly>
+    </div>
+
+    <div id="history">
+
+    </div>
+
+    <script>
+        function calc(op) {
+            var num1 = parseFloat( document.getElementById("num1").value);
+            var num2 = parseFloat(document.getElementById("num2").value);
+            var result = 0;
+            if(num1 == "" || num2 == ""){
+                alert("Digite algo!!!");
+            }else {
+                switch (op) {
+                    case '+':
+                        result = num1 + num2;
+                        break;
+                    case '-':
+                        result = num1 - num2;
+                        break;
+                    case '*':
+                        result = num1 * num2;
+                        break;
+                    case '/':
+                        result = num1 / num2;
+                        break;
+
+                    document.getElementById('history').innerHTML += `h3 ${result}`
+                }
+            }
+            
+            console.log(result);
+        }
+    </script>
+</body>
+</html>
