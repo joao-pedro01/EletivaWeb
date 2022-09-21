@@ -1,0 +1,14 @@
+body{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.display{
+    width: 600px;
+    height: 350px;
+    align-items: center;
+    justify-content: center;
+    padding-left: 8rem;
+    border-radius: 1rem;
+    line-height: 20px;
+}
